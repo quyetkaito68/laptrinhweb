@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0"
+      nonce="kgtrVLRo"
+    ></script>
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <div class="container">
+      <div class="header">
+        <ul class="navBar">
+          <li>Trang chủ</li>
+          <li>Liên hệ</li>
+          <li>Chính sách</li>
+          <li>Hiện thêm</li>
+        </ul>
+      </div>
+      <div class="sidebar">
+        <div>Menu left 1</div>
+        <div>Menu left 2</div>
+        <div>Menu left 3</div>
+        <div>Menu left 4</div>
+      </div>
+      <div class="content">
+        <h3 class="header-content">Đăng ký thông tin</h3>
+        <form>
+          <div class="input-container">
+            <div class="input-field">
+              <label for="name">Username</label>
+              <input type="text" placeholder="Username" id="name" />
+            </div>
+            <div class="input-field">
+              <label for="password">Password</label>
+              <input type="password" placeholder="Password" id="password" />
+            </div>
+            <div class="input-field">
+              <label for="email">Email</label>
+              <input type="text" placeholder="Email" id="email" />
+            </div>
+            <div class="input-field">
+              <label for="datetime">Ngày sinh</label>
+              <input id="datetime" type="date" placeholder="ngày sinh" />
+            </div>
+            <div class="input-field">
+              <label for="gender">Giới tính</label>
+              <input type="radio" placeholder="ngày sinh" name="gender" />
+              <span>Nam</span>
+              <input type="radio" placeholder="ngày sinh" name="gender" />
+              <span>Nữ</span>
+            </div>
+            <div class="input-field">
+              <label for="city">Tỉnh/Thành phố</label>
+              <input id="city" type="text" placeholder="Tỉnh/Thành phố" />
+            </div>
+            <div class="input-field">
+              <label for="favorite">Sở thích</label>
+              <input id="favorite" type="text" placeholder="Sở thích" />
+            </div>
+            <div class="btn-container">
+              <button>Submit</button>
+              <button>Reset</button>
+            </div>
+          </div>
+        </form>
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119054.49005196239!2d106.00742230561812!3d21.174163590975066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31350c5b3464ae51%3A0x1a3035b9749102f9!2zVHAuIELhuq9jIE5pbmgsIELhuq9jIE5pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1631935371492!5m2!1svi!2s"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+        <div
+          class="fb-page"
+          data-href="https://www.facebook.com/ssauupage/"
+          data-tabs="timeline"
+          data-width=""
+          data-height=""
+          data-small-header="false"
+          data-adapt-container-width="true"
+          data-hide-cover="false"
+          data-show-facepile="true"
+        >
+          <blockquote
+            cite="https://www.facebook.com/ssauupage/"
+            class="fb-xfbml-parse-ignore"
+          >
+            <a href="https://www.facebook.com/ssauupage/"
+              >SâU Ma&#039;Y Ti&#039;Nh</a
+            >
+          </blockquote>
+        </div>
+        <div class="footer">Footer</div>
+      </div>
+    </div>
+
+    <!-- Messenger Plugin chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat"></div>
+
+    <script>
+      var chatbox = document.getElementById("fb-customer-chat");
+      chatbox.setAttribute("page_id", "1854178588182634");
+      chatbox.setAttribute("attribution", "biz_inbox");
+
+      window.fbAsyncInit = function () {
+        FB.init({
+          xfbml: true,
+          version: "v12.0",
+        });
+      };
+
+      (function (d, s, id) {
+        var js,
+          fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      })(document, "script", "facebook-jssdk");
+    </script>
+
+  </body>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-family: sans-serif;
+    }
+    .header {
+      background: #178bc0;
+      height: 64px;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 99;
+    }
+    .header-content {
+      color: red;
+    }
+    .navBar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      list-style: none;
+    }
+    .navBar > li {
+      font-size: 18px;
+      color: #fff;
+      line-height: 64px;
+      cursor: pointer;
+      display: block;
+    }
+    .navBar > li:hover {
+      color: #fea828;
+    }
+    .sidebar {
+      position: fixed;
+      left: 0;
+      top: 64px;
+      bottom: 0;
+      width: 128px;
+      background-color: #262626f3;
+    }
+    .sidebar div {
+      height: 40px;
+      color: #fff;
+      cursor: pointer;
+    }
+    .content {
+      position: relative;
+      top: 64px;
+      left: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      flex-direction: column;
+    }
+    .input-field {
+      display: flex;
+      align-items: center;
+    }
+    .input-field input {
+      width: 200px;
+      border: 1px solid #262626;
+      outline: none;
+      margin-left: 10px;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    .input-field + .input-field {
+      margin-top: 10px;
+    }
+    .footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 64px;
+      background: #262626;
+      color: #fff;
+    }
+  </style>
+</html>
