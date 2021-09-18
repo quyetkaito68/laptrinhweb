@@ -19,17 +19,14 @@
     <div class="container">
       <div class="header">
         <ul class="navBar">
-          <li>Trang chủ</li>
-          <li>Liên hệ</li>
-          <li>Chính sách</li>
-          <li>Hiện thêm</li>
+          <li>Thực hành web</li>
         </ul>
       </div>
       <div class="sidebar">
-        <div>Menu left 1</div>
-        <div>Menu left 2</div>
-        <div>Menu left 3</div>
-        <div>Menu left 4</div>
+        <div>Trang chủ</div>
+        <div>Liên hệ</div>
+        <div>Chính sách</div>
+        <div>Hiện thêm</div>
       </div>
       <div class="content">
         <h3 class="header-content">Đăng ký thông tin</h3>
@@ -64,8 +61,12 @@
             </div>
             <div class="input-field">
               <label for="favorite">Sở thích</label>
-              <input id="favorite" type="text" placeholder="Sở thích" />
+              <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+              <label for="vehicle1"> Thể thao</label><br>
             </div>
+            <textarea id="w3review" name="w3review" rows="4" cols="50">
+              
+              </textarea>
             <div class="btn-container">
               <button>Submit</button>
               <button>Reset</button>
@@ -153,9 +154,7 @@
       right: 0;
       z-index: 99;
     }
-    .header-content {
-      color: red;
-    }
+
     .navBar {
       display: flex;
       align-items: center;
@@ -171,6 +170,7 @@
     }
     .navBar > li:hover {
       color: #fea828;
+      align-items: center;
     }
     .sidebar {
       position: fixed;
@@ -205,7 +205,6 @@
       outline: none;
       margin-left: 10px;
       padding: 5px 10px;
-      border-radius: 5px;
     }
     .input-field + .input-field {
       margin-top: 10px;
@@ -216,7 +215,7 @@
       left: 0;
       right: 0;
       height: 64px;
-      background: #262626;
+      background: #178bc0;
       color: #fff;
     }
   </style>
